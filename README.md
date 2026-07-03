@@ -59,9 +59,9 @@ Node.js resolver for ppv.s.. live streams with a browser-based event browser UI.
                             ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                    External Services                            │
-│  api.ppv.st       — event index + substreams metadata           │
-│  embedindia.st    — /fetch handshake + WASM decrypt             │
-│  CDN (indianservers.st, etc.) — actual .m3u8 + .ts segments     │
+│  api.ppv.s..       — event index + substreams metadata           │
+│  embedindia.s..    — /fetch handshake + WASM decrypt             │
+│  CDN (indianservers.s.., etc.) — actual .m3u8 + .ts segments     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
