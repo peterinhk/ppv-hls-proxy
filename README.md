@@ -2,7 +2,7 @@
 
 **Based on:** [sharoon7171/ppv-hls-stream-resolver](https://github.com/sharoon7171/ppv-hls-stream-resolver)
 
-Node.js resolver for ppv.st live streams with a browser-based event browser UI. Fetches stream metadata from the public API, replays the pooembed `/fetch` protobuf handshake, runs the embed WASM decryptor, and proxies HLS playback.
+Node.js resolver for ppv.s.. live streams with a browser-based event browser UI. Fetches stream metadata from the public API, replays the pooembed `/fetch` protobuf handshake, runs the embed WASM decryptor, and proxies HLS playback.
 
 **This fork adds:**
 - Event browser UI with category/text filtering
