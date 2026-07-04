@@ -52,7 +52,7 @@ Node.js resolver for ppv.s.. live streams with a browser-based event browser UI.
                             ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                    Backend API (Node.js)                        │
-│  POST /api/stream  — resolve ppv.st URL → embed → HLS           │
+│  POST /api/stream  — resolve ppv.s.. URL → embed → HLS           │
 │  POST /api/embed   — resolve embed URL directly (substreams)    │
 │  GET  /api/hls     — proxy HLS playlist + segments              │
 └─────────────────────────────────────────────────────────────────┘
@@ -395,7 +395,7 @@ Mobile browsers (especially iOS Safari) may block `navigator.clipboard.writeText
 
 This project:
 - Does **not** host, store, or distribute media content
-- Only reads **public API metadata** from ppv.st
+- Only reads **public API metadata**
 - Calls embed endpoints the same way a browser player would
 - Proxies streams for browser compatibility (like a CORS proxy)
 
