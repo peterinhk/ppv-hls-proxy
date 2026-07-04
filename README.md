@@ -90,6 +90,39 @@ npm start
 
 Server starts on `http://localhost:3000/` (or port from `PORT` env var).
 
+### Docker
+
+1. **Clone the repository**
+
+    ```bash
+    git clone lunatic16/ppv-hls-proxy
+    cd ppv-hls-proxy
+    ```
+
+2. **Docker**
+
+    - Docker Run
+
+    ```bash
+    docker build -t ppv-hls-proxy .
+    docker run -d --name ppv-hls-proxy -p 3000:3000 hls-proxy
+    ```
+
+    - Docker Compose
+
+        1. Copy the .env.example file to .env
+
+            ```bash
+            cp .env.example .env
+            ```
+
+        2. Edit the .env file appropriately
+        3. Run Docker Compose
+
+            ```bash
+            docker compose up -d
+            ```
+
 ### Usage
 
 1. Open `http://localhost:3000/` in your browser
