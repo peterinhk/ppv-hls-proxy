@@ -3,7 +3,8 @@
   "description": "PPV HLS Stream Resolver — fetch ppv.to stream metadata, replay embed /fetch protobuf handshake, WASM decrypt to CDN m3u8, proxy HLS playback",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "build": "node scripts/build.js"
   },
   "dependencies": {
     "happy-dom": "^20.10.6",
