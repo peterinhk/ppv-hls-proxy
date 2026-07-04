@@ -52,16 +52,16 @@ Node.js resolver for ppv.s.. live streams with a browser-based event browser UI.
                             ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                    Backend API (Node.js)                        │
-│  POST /api/stream  — resolve ppv.st URL → embed → HLS           │
+│  POST /api/stream  — resolve ppv.s.. URL → embed → HLS           │
 │  POST /api/embed   — resolve embed URL directly (substreams)    │
 │  GET  /api/hls     — proxy HLS playlist + segments              │
 └─────────────────────────────────────────────────────────────────┘
                             ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                    External Services                            │
-│  api.ppv.s..       — event index + substreams metadata           │
-│  embedindia.s..    — /fetch handshake + WASM decrypt             │
-│  CDN (indianservers.s.., etc.) — actual .m3u8 + .ts segments     │
+│  api.ppv.s..       — event index + substreams metadata          │
+│  embedindia.s..    — /fetch handshake + WASM decrypt            │
+│  CDN (indianservers.s.., etc.) — actual .m3u8 + .ts segments    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -83,7 +83,7 @@ Node.js resolver for ppv.s.. live streams with a browser-based event browser UI.
 ### Installation
 
 ```bash
-cd ppv-hls-stream-resolver
+cd ppv-hls-proxy
 npm install
 npm start
 ```
@@ -95,7 +95,7 @@ Server starts on `http://localhost:3000/` (or port from `PORT` env var).
 1. **Clone the repository**
 
     ```bash
-    git clone lunatic16/ppv-hls-proxy
+    git clone https://github.com/Lunatic16/ppv-hls-proxy.git
     cd ppv-hls-proxy
     ```
 
@@ -341,9 +341,9 @@ public/
 
 ### Environment Variables
 
-| Variable | Default | Description                    |
-|----------|---------|--------------------------------|
-| `PORT`   | `3000`  | HTTP listen port               |
+| Variable | Default | Description                      |
+|----------|---------|----------------------------------|
+| `PORT`   | `3000`  | HTTP listen port                 |
 | `HOST`   | all     | Bind address (e.g., `127.0.0.1`) |
 
 ### API Domain Failover
@@ -395,7 +395,7 @@ Mobile browsers (especially iOS Safari) may block `navigator.clipboard.writeText
 
 This project:
 - Does **not** host, store, or distribute media content
-- Only reads **public API metadata** from ppv.st
+- Only reads **public API metadata**
 - Calls embed endpoints the same way a browser player would
 - Proxies streams for browser compatibility (like a CORS proxy)
 
