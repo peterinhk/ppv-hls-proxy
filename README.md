@@ -59,9 +59,9 @@ Node.js resolver for ppv.s.. live streams with a browser-based event browser UI.
                             ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                    External Services                            │
-│  api.ppv.s..       — event index + substreams metadata           │
-│  embedindia.s..    — /fetch handshake + WASM decrypt             │
-│  CDN (indianservers.s.., etc.) — actual .m3u8 + .ts segments     │
+│  api.ppv.s..       — event index + substreams metadata          │
+│  embedindia.s..    — /fetch handshake + WASM decrypt            │
+│  CDN (indianservers.s.., etc.) — actual .m3u8 + .ts segments    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -341,9 +341,9 @@ public/
 
 ### Environment Variables
 
-| Variable | Default | Description                    |
-|----------|---------|--------------------------------|
-| `PORT`   | `3000`  | HTTP listen port               |
+| Variable | Default | Description                      |
+|----------|---------|----------------------------------|
+| `PORT`   | `3000`  | HTTP listen port                 |
 | `HOST`   | all     | Bind address (e.g., `127.0.0.1`) |
 
 ### API Domain Failover
