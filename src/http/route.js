@@ -8,7 +8,8 @@ import { serveStatic } from './static.js'
 export async function onReq(req, res) {
   if (!req.headers.host) return text(res, 400, 'missing host')
 
-  const loc = new URL(req.url ?? '/', `http://${req.headers.host}`)
+  const proto = String(req.headers['x-forwarded-proto'] || 'http').split(',')[0].trim()
+  const loc = new URL(req.url ?? '/', `${proto}://${req.headers.host}`)
   const { pathname, searchParams, origin } = loc
 
   try {
